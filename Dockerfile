@@ -5,4 +5,6 @@ WORKDIR /app
 RUN mkdir public
 RUN echo "hello, world!" > public/index.html
 
-CMD ["npx", "http-server", "public"]
+RUN npm install -g http-server
+
+CMD ["http-server", "public"]
