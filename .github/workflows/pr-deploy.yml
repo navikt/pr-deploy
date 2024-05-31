@@ -1,4 +1,4 @@
-name: Deploy
+name: PR Deploy
 
 on:
   pull_request:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build-and-deploy:
+  pr-deploy:
     runs-on: ubuntu-latest
 
     permissions:
