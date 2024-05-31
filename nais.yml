@@ -1,0 +1,14 @@
+apiVersion: nais.io/v1alpha1
+kind: Application
+
+metadata:
+  labels:
+    team: frontend-golden-path
+  namespace: frontend-golden-path
+  name: pr-deploy
+
+spec:
+  ingresses:
+    - {{ingress}}
+  image: {{image}}
+  port: 8080
