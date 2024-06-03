@@ -1,12 +1,12 @@
-name: Deploy
+name: PR Deploy
 
 on:
-  push:
+  pull_request:
     branches:
       - main
 
 jobs:
-  deploy:
+  pr-deploy:
     runs-on: ubuntu-latest
 
     permissions:
@@ -28,4 +28,4 @@ jobs:
           CLUSTER: dev-gcp
           IMAGE: ${{ steps.docker-push.outputs.image }}
           RESOURCE: nais.yml
-          VAR: pr-number=0
+          VAR: pr-number=${{ github.event.number }}

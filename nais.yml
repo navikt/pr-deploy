@@ -5,10 +5,10 @@ metadata:
   labels:
     team: frontend-golden-path
   namespace: frontend-golden-path
-  name: pr-deploy
+  name: pr-deploy-{{pr-number}}
 
 spec:
   ingresses:
-    - {{ingress}}
+    - https://pr-deploy-{{pr-number}}.intern.dev.nav.no/
   image: {{image}}
   port: 8080
