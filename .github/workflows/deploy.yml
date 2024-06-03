@@ -28,4 +28,4 @@ jobs:
           CLUSTER: dev-gcp
           IMAGE: ${{ steps.docker-push.outputs.image }}
           RESOURCE: nais.yml
-          VAR: ingress=https://pr-deploy.intern.dev.nav.no/
+          VAR: pr-number=0
